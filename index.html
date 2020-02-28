@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>4LC</title>
+
+  <!-- Font Awesome Icons -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+  <!-- Plugin CSS -->
+  <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+  <!-- Theme CSS - Includes Bootstrap -->
+  <link href="css/creative.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+
+  <style>
+    .photo-padding{
+      padding: 1rem;
+    }
+
+    
+
+    @font-face {
+	font-weight: normal;
+	font-style: normal;
+	font-family: 'feathericons';
+	src:url('../fonts/feathericons/feathericons.eot?-8is7zf');
+	src:url('../fonts/feathericons/feathericons.eot?#iefix-8is7zf') format('embedded-opentype'),
+		url('../fonts/feathericons/feathericons.woff?-8is7zf') format('woff'),
+		url('../fonts/feathericons/feathericons.ttf?-8is7zf') format('truetype'),
+		url('../fonts/feathericons/feathericons.svg?-8is7zf#feathericons') format('svg');
+}
+
+
+/* Common style */
+ figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 10px 1%;
+	max-height: 360px;
+	background: #e1cf79;
+	text-align: center;
+	cursor: pointer;
+}
+
+ figure img {
+	position: relative;
+	display: block;
+	max-width: 100%;
+  opacity: 0.8;
+}
+
+figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+figure figcaption::before,
+figure figcaption::after {
+	pointer-events: none;
+}
+
+figure figcaption,
+figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+@media only screen and (max-width: 600px) {
+  figure h2{
+    font-size: 1rem;
+  }
+}
+
+figure h2 span {
+	font-weight: 800;
+}
+
+figure h2,
+figure p {
+	margin: 0;
+}
+
+figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+
+/*---------------*/
+/***** Milo *****/
+/*---------------*/
+
+figure.effect-milo {
+	background: #2e5d5a;
+}
+
+figure.effect-milo img {
+	max-width: none;
+	width: -webkit-calc(100% + 60px);
+	width: calc(100% + 60px);
+	opacity: 1;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(-30px,0,0) scale(1.12);
+	transform: translate3d(-30px,0,0) scale(1.12);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+figure.effect-milo:hover img {
+	opacity: 0.5;
+	-webkit-transform: translate3d(0,0,0) scale(1);
+	transform: translate3d(0,0,0) scale(1);
+}
+
+figure.effect-milo h2 {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	padding: 1em 1.2em;
+}
+
+figure.effect-milo p {
+	padding: 0 10px 0 0;
+	width: 50%;
+	border-right: 1px solid #fff;
+	text-align: right;
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(-40px,0,0);
+	transform: translate3d(-40px,0,0);
+}
+
+figure.effect-milo:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+  </style>
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <img src="img/logo.png" alt="logo" width="40">
+      </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto my-2 my-lg-0">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#friends">Friends</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#safari">Safari</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#bandung">Bandung</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Masthead -->
+  <header class="masthead">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center justify-content-center text-center">
+        <div class="col-lg-10 align-self-end">
+          <h1 class="text-uppercase text-white font-weight-bold">4LC</h1>
+          <hr class="divider my-4">
+        </div>
+        <div class="col-lg-8 align-self-baseline">
+          <p class="text-white-75 font-weight-light mb-5">"A best friend is like a four leaf clover, hard to find, lucky to have."</p>
+          <a class="bg-primary btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="page-section bg-primary" id="friends">
+    <div class="container">
+          <h2 class="text-center text-white mt-0">Our Friends!</h2>
+          <hr class="divider light my-4">
+
+         <div class="slider wow slideInLeft" id="photos">
+          <div class="slide"> 
+            <figure class="effect-milo">
+              <img class="img-fluid" src="img/rara.jpg" alt="img1"/>
+              <figcaption>
+                <div>
+                  <h2>Agnela <span>Dyah</span></h2>
+                  <p>Pendek, Seru, Relationship Advisor</p>
+                </div>
+              </figcaption>			
+            </figure>
+        </div> 
+          
+        <div class="slide"> 
+          <figure class="effect-milo">
+            <img class="img-fluid" src="img/arya.jpg" alt="img1"/>
+            <figcaption>
+              <div>
+                <h2>Aryasatya <span>Wikara</span></h2>
+                <p>Sok Pede, Bucin, Brother</p>
+              </div>
+            </figcaption>			
+          </figure>
+      </div> 
+
+      <div class="slide"> 
+        <figure class="effect-milo">
+          <img class="img-fluid" src="img/christin.jpg" alt="img1"/>
+          <figcaption>
+            <div>
+              <h2>Christin W. <span>Halim</span></h2>
+              <p>Pendek, Lucu, Asik Banget</p>
+            </div>
+          </figcaption>			
+        </figure>
+    </div> 
+
+    <div class="slide"> 
+      <figure class="effect-milo">
+        <img class="img-fluid" src="img/haeeun.jpg" alt="img1"/>
+        <figcaption>
+          <div>
+            <h2>Hae Eun <span>Hong</span></h2>
+            <p>Gila, Ga tau malu, Super Fun</p>
+          </div>
+        </figcaption>			
+      </figure>
+  </div> 
+           
+    <div class="slide"> 
+      <figure class="effect-milo">
+        <img class="img-fluid" src="img/kezya.jpg" alt="img1"/>
+        <figcaption>
+          <div>
+            <h2>Kezya G. <span>Wijaya</span></h2>
+            <p>Berisik, Kebiasaan mukul, Seru Banget</p>
+          </div>
+        </figcaption>			
+      </figure>
+  </div> 
+
+    <div class="slide"> 
+      <figure class="effect-milo">
+        <img class="img-fluid" src="img/marcell.jpg" alt="img1"/>
+        <figcaption>
+          <div>
+            <h2>Marcell S. <span>Hardja</span></h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, esse.</p>
+          </div>
+        </figcaption>			
+      </figure>
+  </div> 
+
+    <div class="slide"> 
+      <figure class="effect-milo">
+        <img class="img-fluid" src="img/rachel.jpg" alt="img1"/>
+        <figcaption>
+          <div>
+            <h2>Rachel A. <span>Lianto</span></h2>
+            <p>Bawel, Pendek, Cheerful</p>
+          </div>
+        </figcaption>			
+      </figure>
+  </div> 
+
+  <div class="slide"> 
+    <figure class="effect-milo">
+      <img class="img-fluid" src="img/samuel.jpg" alt="img1"/>
+      <figcaption>
+        <div>
+          <h2>Samuel J. <span>Wijaya</span></h2>
+          <p>Feminim, Kocak, Brother</p>
+        </div>
+      </figcaption>			
+    </figure>
+</div> 
+           
+         </div>
+          <!-- <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="page-section bg-dark text-light" id="safari">
+    <div class="container">
+      <h2 class="text-center mt-0">Taman Safari</h2>
+      <hr class="divider my-4">
+      <div class="slider memories text-center wow fadeInUp">
+
+        <div class="slide">
+          <video width="60%" height="auto" controls>
+            <source src="img/safarivid1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="slide">
+          <video width="60%" height="auto" controls>
+            <source src="img/safarivid2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="slide">
+          <img src="img/safari1.jpeg" alt="safaripic" class="img-fluid" style="display:block; margin-left: auto; margin-right: auto;">
+        </div>
+
+        <div class="slide">
+          <img src="img/safari2.jpeg" alt="safaripic" class="img-fluid" style="display:block; margin-left: auto; margin-right: auto;">
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Call to Action Section -->
+  <section class="page-section bg-light" id="bandung">
+    <div class="container text-center">
+      <h2>Bandung</h2>
+      <hr class="divider my-4">
+      <div class="slider memories wow slideInUp">
+
+        <div class="slide">
+          <video width="60%" height="auto" controls>
+            <source src="img/bdvid1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="slide">
+          <img src="img/bd1.jpeg" alt="safaripic" class="img-fluid" style="display:block; margin-left: auto; margin-right: auto;">
+        </div>
+
+        <div class="slide">
+          <img src="img/bd2.jpeg" alt="safaripic" class="img-fluid" style="display:block; margin-left: auto; margin-right: auto;">
+        </div>
+
+        <div class="slide">
+          <img src="img/bd3.jpeg" alt="safaripic" class="img-fluid" style="display:block; margin-left: auto; margin-right: auto;">
+        </div>
+
+        <div class="slide">
+          <img src="img/bd4.jpeg" alt="safaripic" class="img-fluid" style="display:block; margin-left: auto; margin-right: auto;">
+        </div>
+
+        <div class="slide">
+          <img src="img/bd5.jpeg" alt="safaripic" class="img-fluid" style="display:block; margin-left: auto; margin-right: auto;">
+        </div>
+
+        <div class="slide">
+          <img src="img/bd6.jpeg" alt="safaripic" class="img-fluid" style="display:block; margin-left: auto; margin-right: auto;">
+        </div>
+
+        <div class="slide">
+          <img src="img/bd7.jpeg" alt="safaripic" class="img-fluid" style="display:block; margin-left: auto; margin-right: auto;">
+        </div>
+
+        <div class="slide">
+          <img src="img/bd8.jpeg" alt="safaripic" class="img-fluid" style="display:block; margin-left: auto; margin-right: auto;">
+        </div>
+
+        <div class="slide">
+          <img src="img/bd9.jpeg" alt="safaripic" class="img-fluid" style="display:block; margin-left: auto; margin-right: auto;">
+        </div>
+
+        <div class="slide">
+          <img src="img/bd10.jpeg" alt="safaripic" class="img-fluid" style="display:block; margin-left: auto; margin-right: auto;">
+        </div>
+
+        <div class="slide">
+          <img src="img/bd11.jpeg" alt="safaripic" class="img-fluid" style="display:block; margin-left: auto; margin-right: auto;">
+        </div>
+
+        <div class="slide">
+          <img src="img/bd12.jpeg" alt="safaripic" class="img-fluid" style="display:block; margin-left: auto; margin-right: auto;">
+        </div>
+
+        <div class="slide">
+          <img src="img/bd13.jpeg" alt="safaripic" class="img-fluid" style="display:block; margin-left: auto; margin-right: auto;">
+        </div>
+
+        
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="page-section bg-dark text-light">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="mt-0">Let's Get On Another Trip Together!</h2>
+          <hr class="divider my-4">
+          <div class="mb-5">
+            <p>Wishing you guys good luck for your uni life and hope that we can gather again!</p>
+        </div>
+        <img src="img/logo.png" alt="logo" style="width: 100px;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-light py-5">
+    <div class="container">
+      <div class="small text-center text-muted">Created by Marcell Septian Hardja</div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/creative.min.js"></script>
+  <script src="js/slick.min.js"></script>
+
+  <script type="text/javascript">
+    $('#photos').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      pauseonhover:true,
+      autoplaySpeed: 3000,
+      arrows:false,
+      dots:true,
+      responsive:[{
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 987,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 654,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+      ],
+    });</script>
+
+<script type="text/javascript">
+  $('.memories').slick({
+  dots: true,
+  infinite: true,
+  arrows:false,
+  speed: 500,
+  fade: true,
+  cssEase: 'linear'
+});
+</script>
+<script src="js/wow.js"></script>
+<script>
+new WOW().init();
+</script>
+</body>
+
+</html>
